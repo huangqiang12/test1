@@ -1,0 +1,93 @@
+<!--pages/pay/pay.wxml-->
+<!-- <button bindtap='pay'>去支付</button>  -->
+<view class='pay-warp'>
+  <form bindsubmit="pay">
+    <view class='pay-price'>
+      <view class='price-title'>支付金额</view>
+      <view class='price-number'>￥{{infor.price}}</view>
+    </view>
+    <view class='pay-type'>
+      <view class='pay-top'>支付方式</view>
+      <view class='pay-main'>
+        <radio-group name="type">
+          <label class='label-li'>
+            <view class='label-left'>
+              <image src='../../img/wechat-pay.svg'></image>
+              <view>微信支付</view>
+            </view>
+            <radio value='wecaht' checked="true"></radio>
+          </label>
+
+
+          <label class='label-li'>
+            <view class='label-left'>
+              <image src='../../img/yuezhifu.svg'></image>
+              <view>余额支付</view>
+            </view>
+            <radio value='yue'></radio>
+          </label>
+
+          <label class="label-li {{infor.coupon_id != 0 || infor.first_free != 0 ? 'radio_off':''}}" bindtap='sk_play'>
+            <view class='label-left'>
+              <image src='../../img/card-pay.svg'></image>
+              <view>
+                <text>宿卡支付</text>
+              </view>
+            </view>
+            <view class='sk_ms'>
+              <!-- <text class='sy_cs' wx:if="{{infor.sxcard_status > 0}}">剩余 {{infor.user_times}} 件</text> -->
+              <radio value='card' disabled="{{infor.coupon_id != 0 || infor.first_free != 0}}"></radio>
+            </view>
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <button form-type='submit' class='pay-btn' loading='{{pay==1}}'>去支付</button>
+  </form>
+</view>
+
+<!--宿卡支付密码  -->
+<view class='mark_sk' wx:if="{{sk_pay == 1 || ye_pay == 1 || pay_yunfei_pass == 1}}">
+  <form bindsubmit="pass_pay">
+    <view class='sk-main'>
+      <view class='colse' bindtap='colse_sk_pay'>X</view>
+      <view class='pass-label'>
+        <input type='password' placeholder="请输入支付密码" maxlength='6' name="pass"></input>
+        <button form-type='submit' class='sun_btn' loading='{{pass_sk_pay ==1}}'>确定</button>
+      </view>
+      <view class='back-pass'>
+        <navigator url="/pages/password/password?types={{sk_pay == 1 ? '1':'2'}}" open-type="navigateTo" hover-class='none'>忘记密码</navigator>
+      </view>
+    </view>
+  </form>
+</view>
+
+<view class='mark-share-tip' wx:if="{{share_tip == 1}}">
+  <view>
+    <image class='share_img' src='../../img/pay_share_tip.png' mode='widthFix'></image>
+    <image class='share_close' src='../../img/pay_close.png' mode='widthFix'></image>
+  </view>
+</view>
+
+
+<view class='mark-zuhe' wx:if="{{mark_yunfei == 1}}">
+  <view class='mark-zuhe-main'>
+    <view class='pay-close' bindtap='close_yunfei'>
+      <image src='../../img/close.svg'></image>
+    </view>
+    <form bindsubmit="play_yunfei">
+      <radio-group class="radio-group" name="yunfei_type" >
+        <label class="pay-radio">
+          <radio value="1" />
+          <text>微信支付运费</text>
+        </label>
+
+        <label class="pay-radio">
+          <radio value="2" />
+          <text>余额支付运费</text>
+        </label>
+      </radio-group>
+      <button form-type='submit' class='pay-yunfei'>支付运费</button>
+    </form>
+  </view>
+</view>

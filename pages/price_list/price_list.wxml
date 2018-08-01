@@ -1,0 +1,16 @@
+<!--pages/price_list/price_list.wxml-->
+<view class='table' wx:for="{{bk.taglist}}" wx:key="" wx:for-item="i" wx:for-index="idx">
+  <view class='tr'>
+    <block>
+      <view class='td'>{{i.title}}</view>
+      <view class='td'>价格</view>
+    </block>
+  </view>
+
+  <view class='tr' wx:for="{{bk.goods}}" wx:key="" wx:for-item="s" wx:for-index="ind" wx:if="{{s.tagid == i.id}}">
+    <block wx:if="{{i.id == s.tagid}}">
+      <view class='td'>{{s.name}}</view>
+      <view class='td'>{{s.price}}</view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,63 @@
+<!--share.wxml-->
+<!-- <view class='share-warp'>
+  <image class='share-title' src='http://www.qiaolibeilang.com/public/new_xcx/share-title.png'></image>
+  <button class='share-btn' open-type="share">分享给好友</button>
+</view> -->
+
+<view class='new-share'>
+  <view class='share-title'>SUSIE宿洗免费请好友洗衣</view>
+  <view class='share-time'>
+    <view>SUSIE宿洗</view>
+    <view>2018-05-21</view>
+  </view>
+  <image class='share-img' mode="widthFix" src='../../img/share_1.jpg'></image>
+  <view class='number'>///
+    <text>1</text>///</view>
+
+  <view class='text-tip'>
+    <text>最近SUSIE宿洗越来越火了\n很多小伙伴使用后也想分享给好友\n现在，我们上线了这个增进友情的新功能！</text>
+  </view>
+  <view class='text-tip-b'>邀请好友免费洗衣</view>
+  <view class='text-tip'>
+    <text>不仅<text>TA</text>能获得一次免费洗衣的机会 \n当他注册后你也能免费获得一次洗衣机会</text>
+  </view>
+  <image class='share-img' mode="widthFix" src='../../img/share_2.jpg'></image>
+
+  <view class='number'>///
+    <text>2</text>///</view>
+  <view class='text-tip'>微信搜索或扫描二维码进入</view>
+  <view class='text-tip'>进入我的，点击分享宿洗</view>
+  <image class='share-img' mode="widthFix" src='../../img/share_3.jpg'></image>
+  <view class='number'>///
+    <text>3</text>///</view>
+
+  <view class='text-tip'>
+    <text>分享赠送页面给微信好友\n<text>TA</text>成功注册后就能获得一次免费洗衣体验\n同时你也能获得一次免费洗衣体验\n成功邀请几个好友，就送你几次！\n多劳多得哦，还不快行动起来！
+    </text>
+  </view>
+
+  <view class='br'></view>
+
+  <image class='share-down' src='../../img/share_down.svg' mode='widthFix'></image>
+  <view class='footer-text'>这样福利型的功能还不赶紧体验？</view>
+
+  <view class='foot-text-2'>点击下图，跳转小程序请好友免费洗衣
+    <image src='../../img/share_shouzhi.svg'></image>
+  </view>
+  <button open-type='share' class='share-sx'>
+    <image class='share-img' mode="widthFix" src='../../img/share_4.jpg'></image>
+  </button>
+  <view class='footer-number'>
+    <view class='fn-left'>阅读原文
+      <text>阅读 6753</text>
+    </view>
+    <view class='fn-right'>
+      <image src='../../img/share_like.svg'></image>
+      <text>1534</text>
+    </view>
+  </view>
+
+
+
+
+</view>
